@@ -1,0 +1,143 @@
+/* Estilos Generales */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    background-image: url(../img/backgound-body.jpeg);
+    height: max-content;
+    
+}
+
+/* Nav bar */
+
+ul {
+    background-image: url(../img/navbar.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+
+/* Estilos Header */
+
+.header-inicio {
+    background-image: url(../img/header-background-ligth.jpeg);
+}
+
+.titulo-inicio {
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+.parrafo-inicio {
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+
+/* Estilos Index */
+
+.contenido-inicio {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    margin-bottom: 5rem;
+    background-color: rgba(0, 0, 0, 0.226);
+}
+
+.nombre-producto-destacado {
+    color: rgb(255, 255, 255);
+}
+
+.parrafo-destacado {
+    color: rgb(255, 255, 255);
+}
+
+p {
+    color: white;
+}
+
+/* cards */
+
+.card-noticia {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+
+}
+
+.card-index {
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    min-height: 280px;
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+    position: relative;
+}
+
+.card-index:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.card-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+
+.card-texto {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+    position: relative;
+}
+
+.card-index p {
+    text-align: left;
+}
+
+
+/* imagenes */
+
+.img-carousel {
+    width: 100vh;
+}
+
+.logo-pagina {
+    width: 5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Estilos Footer */
+
+footer {
+    background-image: url(../img/header-background-ligth.jpeg);
+    color: rgb(255, 255, 255);
+    position: static;
+}
+
+.logo-contactos {
+    width: 3rem;
+}
+
+/* media */
