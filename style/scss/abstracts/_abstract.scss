@@ -1,0 +1,58 @@
+// Variables de color
+$color-white: rgb(255, 255, 255);
+$color-primary-blue: #374ecc;
+$color-secondary-blue: #3498db;
+$color-light-blue: rgb(108, 106, 255);
+$color-dark-transparent: rgba(0, 0, 0, 0.226);
+$color-dark-card-bg: rgba(0, 0, 0, 0.753);
+$color-black-transparent: rgba(0, 0, 0, 0.281);
+$color-black-shadow: rgb(0, 0, 0);
+$color-card-border: rgb(255, 255, 255);
+$color-card-shadow: rgba(255, 255, 255, 0.986);
+$color-dark-grey: #1a1a1a;
+
+// Variables de espaciado
+$spacing-small: 10px;
+$spacing-medium: 15px;
+$spacing-large: 20px;
+$spacing-xl: 30px;
+$spacing-xxl: 5rem; // Aproximadamente 80px
+
+// Variables de radio de borde
+$border-radius-small: 5px;
+$border-radius-medium: 8px;
+
+// Variables de breakpoints
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 769px;
+
+// Mixins
+@mixin flex-center-space-around {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@mixin card-hover-effect {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 8px 16px $color-black-shadow;
+    cursor: pointer;
+}
+
+@mixin text-style($color: $color-white, $align: center) {
+    text-align: $align;
+    color: $color;
+}
+
+// Media Query Mixin
+@mixin media-max-width($breakpoint) {
+    @media (max-width: $breakpoint) {
+        @content;
+    }
+}
+
+@mixin media-min-width($breakpoint) {
+    @media (min-width: $breakpoint) {
+        @content;
+    }
+}

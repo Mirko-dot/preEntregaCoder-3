@@ -1,0 +1,42 @@
+.header {
+    background-image: url(../img/header-background-ligth.jpeg);
+}
+
+.titulo {
+    @include text-style;
+}
+
+.parrafo-titulo {
+    @include text-style;
+}
+
+.nav-bar {
+    ul {
+        background-image: url(../img/navbar.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        list-style: none;
+        padding: 0;
+        @include flex-center-space-around;
+
+        li {
+            a {
+                color: $color-primary-blue;
+                text-decoration: none;
+                border-radius: $border-radius-small;
+                transition: color 0.3s ease, background-color 0.3s ease;
+
+                &:hover {
+                    color: $color-secondary-blue;
+                    background-color: $color-black-transparent;
+                }
+            }
+        }
+    }
+}
+
+footer {
+    background-image: url(../img/header-background-ligth.jpeg);
+    color: $color-white;
+    position: static;
+}

@@ -1,0 +1,14 @@
+// Estilos Index
+.contenido-inicio {
+    @include text-style;
+    margin-bottom: $spacing-xxl;
+    background-color: $color-dark-transparent;
+}
+
+.nombre-producto-destacado {
+    color: $color-white;
+}
+
+.parrafo-destacado {
+    color: $color-white;
+}
