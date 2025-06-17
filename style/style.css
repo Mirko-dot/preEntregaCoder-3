@@ -1,19 +1,49 @@
 /* Estilos Generales */
 
+
+
 * {
+
     padding: 0;
+
     margin: 0;
+
     box-sizing: border-box;
+
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
 }
+
+
 
 body {
     background-image: url(../img/backgound-body.jpeg);
     height: max-content;
-    
+}
+
+
+
+.header {
+    background-image: url(../img/header-background-ligth.jpeg);
+}
+
+
+
+.titulo {
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+
+
+.parrafo-titulo {
+    text-align: center;
+    color: rgb(255, 255, 255);
 }
 
 /* Nav bar */
+
+
 
 ul {
     background-image: url(../img/navbar.jpg);
@@ -24,28 +54,35 @@ ul {
     display: flex;
     justify-content: space-around;
     align-items: center;
-
 }
 
 
-/* Estilos Header */
 
-.header-inicio {
-    background-image: url(../img/header-background-ligth.jpeg);
+.nav-bar ul li a {
+    color: #374ecc;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: color 0.3s ease, background-color 0.3s ease;
 }
 
-.titulo-inicio {
-    text-align: center;
-    color: rgb(255, 255, 255);
+
+
+.nav-bar ul li a:hover {
+    color: #3498db;
+    background-color: rgba(0, 0, 0, 0.281);
 }
 
-.parrafo-inicio {
-    text-align: center;
-    color: rgb(255, 255, 255);
-}
+
+
+
+
+
+
 
 
 /* Estilos Index */
+
+
 
 .contenido-inicio {
     text-align: center;
@@ -54,53 +91,70 @@ ul {
     background-color: rgba(0, 0, 0, 0.226);
 }
 
+
+
 .nombre-producto-destacado {
     color: rgb(255, 255, 255);
 }
+
+
 
 .parrafo-destacado {
     color: rgb(255, 255, 255);
 }
 
+
+
 p {
-    color: white;
+    color: rgb(255, 255, 255);
 }
+
+
 
 /* cards */
 
-.card-noticia {
+.card-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
     padding: 20px;
-
 }
 
-.card-index {
+
+
+.cards {
     border: 1px solid rgb(255, 255, 255);
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.986);
     display: flex;
     flex-direction: column;
     min-height: 280px;
     transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
     position: relative;
+    background-color: rgba(0, 0, 0, 0.753);
 }
 
-.card-index:hover {
+
+
+.cards:hover {
     transform: translateY(-5px) scale(1.02);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 8px 16px rgb(0, 0, 0);
     cursor: pointer;
 }
 
-.card-img {
+
+
+.cards img {
     width: 100%;
-    height: 180px;
+    height: auto;
     object-fit: cover;
     object-position: top;
     display: block;
 }
+
+
+
 
 
 .card-texto {
@@ -112,13 +166,7 @@ p {
     padding: 15px;
 }
 
-.card-index p {
-    text-align: left;
-}
-
-
 /* imagenes */
-
 .img-carousel {
     width: 100vh;
 }
@@ -142,4 +190,80 @@ footer {
     width: 3rem;
 }
 
-/* media */
+/* FAQ estilos */
+
+.preguntas {
+    color: rgb(108, 106, 255);
+}
+
+.preguntas-item {
+    border: 1px solid rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    margin: 10px;
+}
+
+.titulo-preguntas {
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+.preguntas-description {
+    border: 1px solid rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    margin: 10px;
+}
+
+/* Media Cards */
+
+@media (max-width: 768px) {
+    .card-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .cards {
+        min-height: 300px;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        background-size: cover;
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-color: #1a1a1a;
+    }
+
+    .cards img {
+        margin: 0 auto;
+    }
+
+    .card::before {
+        display: block;
+        background-color: rgba(0, 0, 0, 0.65);
+    }
+
+    .card-texto {
+        padding: 15px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .card-texto {
+        font-size: 1.1em;
+        line-height: 1.6;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+        margin-bottom: 0;
+    }
+
+
+
+    .img-carousel {
+        width: 100%;
+    }
+
+}
+
+@media (min-width: 769px) {
+    .cards img {
+        height: 280px;
+    }
+
+}
